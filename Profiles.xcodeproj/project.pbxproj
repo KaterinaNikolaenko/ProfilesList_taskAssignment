@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0653BB0F22BC286200C193BE /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB0E22BC286200C193BE /* UITableView.swift */; };
+		0653BB1222BC2CD500C193BE /* ProfilesSupplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1122BC2CD500C193BE /* ProfilesSupplier.swift */; };
+		0653BB1422BC2D9600C193BE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1322BC2D9600C193BE /* Result.swift */; };
 		0666477C22BC22A100347153 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666477B22BC22A100347153 /* ViewControllersFactory.swift */; };
 		0666477E22BC250E00347153 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666477D22BC250E00347153 /* Profile.swift */; };
 		0666478122BC265F00347153 /* MainProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666477F22BC265F00347153 /* MainProfileTableViewCell.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		0653BB0E22BC286200C193BE /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		0653BB1122BC2CD500C193BE /* ProfilesSupplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesSupplier.swift; sourceTree = "<group>"; };
+		0653BB1322BC2D9600C193BE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		0666477B22BC22A100347153 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		0666477D22BC250E00347153 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		0666477F22BC265F00347153 /* MainProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileTableViewCell.swift; sourceTree = "<group>"; };
@@ -63,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0653BB1022BC2CC200C193BE /* Supplliers */ = {
+			isa = PBXGroup;
+			children = (
+				0653BB1122BC2CD500C193BE /* ProfilesSupplier.swift */,
+			);
+			path = Supplliers;
+			sourceTree = "<group>";
+		};
 		0666477A22BC228E00347153 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 		06B1313922BC1853004B57B4 /* Profiles */ = {
 			isa = PBXGroup;
 			children = (
+				0653BB1022BC2CC200C193BE /* Supplliers */,
 				06B1314C22BC19CC004B57B4 /* Entities */,
 				06B1314F22BC1AC4004B57B4 /* Protocols */,
 				06B1315622BC1B6E004B57B4 /* Utilities */,
@@ -109,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				0666477D22BC250E00347153 /* Profile.swift */,
+				0653BB1322BC2D9600C193BE /* Result.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -339,10 +353,12 @@
 				06B1316D22BC1F54004B57B4 /* ProfilesListInteractor.swift in Sources */,
 				0666477C22BC22A100347153 /* ViewControllersFactory.swift in Sources */,
 				06B1316722BC1EF9004B57B4 /* ProfilesListViewController.swift in Sources */,
+				0653BB1222BC2CD500C193BE /* ProfilesSupplier.swift in Sources */,
 				06B1316F22BC1FDB004B57B4 /* ProfilesListDataSource.swift in Sources */,
 				06B1316B22BC1F45004B57B4 /* ProfilesListPresenter.swift in Sources */,
 				0666478122BC265F00347153 /* MainProfileTableViewCell.swift in Sources */,
 				06B1315D22BC1D9C004B57B4 /* BaseTableViewCell.swift in Sources */,
+				0653BB1422BC2D9600C193BE /* Result.swift in Sources */,
 				06B1316222BC1E37004B57B4 /* TableViewDataSource.swift in Sources */,
 				06B1313B22BC1853004B57B4 /* AppDelegate.swift in Sources */,
 			);

@@ -17,7 +17,7 @@ class ProfilesListInteractor {
     
     private var presenter: ProfilesListPresenterProtocol!
     
-//    private let supplier: ProfilesSupplier
+    private let supplier: ProfilesSupplier
     
 //    init(supplier: ProfilesSupplier) {
 //
