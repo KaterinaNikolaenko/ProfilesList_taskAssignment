@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0653BB0F22BC286200C193BE /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB0E22BC286200C193BE /* UITableView.swift */; };
+		0666477C22BC22A100347153 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666477B22BC22A100347153 /* ViewControllersFactory.swift */; };
+		0666477E22BC250E00347153 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666477D22BC250E00347153 /* Profile.swift */; };
+		0666478122BC265F00347153 /* MainProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666477F22BC265F00347153 /* MainProfileTableViewCell.swift */; };
+		0666478222BC265F00347153 /* MainProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0666478022BC265F00347153 /* MainProfileTableViewCell.xib */; };
 		06B1313B22BC1853004B57B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1313A22BC1853004B57B4 /* AppDelegate.swift */; };
 		06B1313D22BC1853004B57B4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1313C22BC1853004B57B4 /* BaseViewController.swift */; };
 		06B1314022BC1853004B57B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B1313E22BC1853004B57B4 /* Main.storyboard */; };
@@ -20,9 +25,15 @@
 		06B1316722BC1EF9004B57B4 /* ProfilesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1316622BC1EF9004B57B4 /* ProfilesListViewController.swift */; };
 		06B1316B22BC1F45004B57B4 /* ProfilesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1316A22BC1F45004B57B4 /* ProfilesListPresenter.swift */; };
 		06B1316D22BC1F54004B57B4 /* ProfilesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1316C22BC1F54004B57B4 /* ProfilesListInteractor.swift */; };
+		06B1316F22BC1FDB004B57B4 /* ProfilesListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1316E22BC1FDB004B57B4 /* ProfilesListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0653BB0E22BC286200C193BE /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		0666477B22BC22A100347153 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
+		0666477D22BC250E00347153 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		0666477F22BC265F00347153 /* MainProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileTableViewCell.swift; sourceTree = "<group>"; };
+		0666478022BC265F00347153 /* MainProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainProfileTableViewCell.xib; sourceTree = "<group>"; };
 		06B1313722BC1853004B57B4 /* Profiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Profiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B1313A22BC1853004B57B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06B1313C22BC1853004B57B4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +49,7 @@
 		06B1316622BC1EF9004B57B4 /* ProfilesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesListViewController.swift; sourceTree = "<group>"; };
 		06B1316A22BC1F45004B57B4 /* ProfilesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesListPresenter.swift; sourceTree = "<group>"; };
 		06B1316C22BC1F54004B57B4 /* ProfilesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesListInteractor.swift; sourceTree = "<group>"; };
+		06B1316E22BC1FDB004B57B4 /* ProfilesListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0666477A22BC228E00347153 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				0666477B22BC22A100347153 /* ViewControllersFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		06B1312E22BC1853004B57B4 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +108,7 @@
 		06B1314C22BC19CC004B57B4 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				0666477D22BC250E00347153 /* Profile.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -172,6 +193,7 @@
 		06B1315622BC1B6E004B57B4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0666477A22BC228E00347153 /* Factories */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -180,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				06B1315A22BC1CBD004B57B4 /* UIView.swift */,
+				0653BB0E22BC286200C193BE /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,6 +244,7 @@
 		06B1316822BC1F04004B57B4 /* Data Source */ = {
 			isa = PBXGroup;
 			children = (
+				06B1316E22BC1FDB004B57B4 /* ProfilesListDataSource.swift */,
 			);
 			path = "Data Source";
 			sourceTree = "<group>";
@@ -228,6 +252,8 @@
 		06B1316922BC1F0E004B57B4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0666477F22BC265F00347153 /* MainProfileTableViewCell.swift */,
+				0666478022BC265F00347153 /* MainProfileTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -292,6 +318,7 @@
 			files = (
 				06B1314522BC1855004B57B4 /* LaunchScreen.storyboard in Resources */,
 				06B1314222BC1855004B57B4 /* Assets.xcassets in Resources */,
+				0666478222BC265F00347153 /* MainProfileTableViewCell.xib in Resources */,
 				06B1314022BC1853004B57B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,11 +332,16 @@
 			files = (
 				06B1316022BC1DE1004B57B4 /* ReuseProtocol.swift in Sources */,
 				06B1315B22BC1CBD004B57B4 /* UIView.swift in Sources */,
+				0653BB0F22BC286200C193BE /* UITableView.swift in Sources */,
 				06B1315822BC1C48004B57B4 /* BaseTableViewController.swift in Sources */,
+				0666477E22BC250E00347153 /* Profile.swift in Sources */,
 				06B1313D22BC1853004B57B4 /* BaseViewController.swift in Sources */,
 				06B1316D22BC1F54004B57B4 /* ProfilesListInteractor.swift in Sources */,
+				0666477C22BC22A100347153 /* ViewControllersFactory.swift in Sources */,
 				06B1316722BC1EF9004B57B4 /* ProfilesListViewController.swift in Sources */,
+				06B1316F22BC1FDB004B57B4 /* ProfilesListDataSource.swift in Sources */,
 				06B1316B22BC1F45004B57B4 /* ProfilesListPresenter.swift in Sources */,
+				0666478122BC265F00347153 /* MainProfileTableViewCell.swift in Sources */,
 				06B1315D22BC1D9C004B57B4 /* BaseTableViewCell.swift in Sources */,
 				06B1316222BC1E37004B57B4 /* TableViewDataSource.swift in Sources */,
 				06B1313B22BC1853004B57B4 /* AppDelegate.swift in Sources */,

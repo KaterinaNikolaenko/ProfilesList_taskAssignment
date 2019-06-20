@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.showMainUI()
+        
         return true
     }
 
@@ -40,7 +43,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
+//MARK: Private
+extension AppDelegate {
+    
+    private func showMainUI() {
+        
+        let viewController = ViewControllersFactory.getMainController()
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window!.rootViewController = viewController
+        self.window!.makeKeyAndVisible()
+    }
+}
