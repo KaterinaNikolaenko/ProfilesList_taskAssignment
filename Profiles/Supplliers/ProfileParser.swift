@@ -18,12 +18,10 @@ extension ProfilesSupplier.Parser {
     
     func parseProfile(json: JSON) -> Profile? {
         
-        guard let id = json[Keys.id].int,
-            let first_name = json[Keys.first_name].string,
-            let last_name = json[Keys.last_name].string,
-            let profile_picture = json[Keys.profile_picture].string else {
-                return nil
-        }
+        let id = json.dictionary?[Keys.id]?.int ?? 0
+        let first_name = json.dictionary?[Keys.first_name]?.string
+        let last_name = json.dictionary?[Keys.last_name]?.string
+        let profile_picture = json.dictionary?[Keys.profile_picture]?.string ?? ""
         
         return Profile(id: id, first_name: first_name, last_name: last_name, profile_picture: profile_picture, isFavorite: false)
     }

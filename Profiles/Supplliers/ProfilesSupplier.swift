@@ -51,18 +51,11 @@ extension ProfilesSupplier {
 
 extension ProfilesSupplier {
     
-    private enum Keys {
-        static let some = "some"
-        static let results = "results"
-    }
-    
     private func parseProfiles(json: JSON) -> [Profile] {
         
-        
-        guard let jsonArray = json.array?.first?[Keys.some].array else {
+        guard let jsonArray = json.array?.first?.array else {
             return []
         }
-        
         return jsonArray.compactMap({ (object) -> Profile? in
             return self.parser.parseProfile(json: object)
         })
