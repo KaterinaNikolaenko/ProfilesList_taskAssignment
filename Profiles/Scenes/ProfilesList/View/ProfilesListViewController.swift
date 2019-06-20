@@ -87,6 +87,7 @@ extension ProfilesListViewController: ProfilesListViewProtocol {
     func show(profiles: [Profile]) {
         
         self.profiles = profiles
+        self.dataSource.set(items: profiles)
         
         self.tableView.reloadData()
     }
