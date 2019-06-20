@@ -19,9 +19,13 @@ extension ViewControllersFactory {
     
     static func getMainController() -> ProfilesListViewController {
         
+        let parser = ProfilesSupplier.Parser()
+        let loader = ProfilesSupplier.Loader()
+        let supplier = ProfilesSupplier(parser: parser, loader: loader)
+        
         let viewController = ProfilesListViewController()
         let presenter = ProfilesListPresenter()
-        let interactor = ProfilesListInteractor()
+        let interactor = ProfilesListInteractor(supplier: supplier)
         
         viewController.set(interactor: interactor)
         interactor.set(presenter: presenter)

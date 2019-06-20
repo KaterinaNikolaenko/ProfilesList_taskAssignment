@@ -10,6 +10,11 @@
 		0653BB0F22BC286200C193BE /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB0E22BC286200C193BE /* UITableView.swift */; };
 		0653BB1222BC2CD500C193BE /* ProfilesSupplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1122BC2CD500C193BE /* ProfilesSupplier.swift */; };
 		0653BB1422BC2D9600C193BE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1322BC2D9600C193BE /* Result.swift */; };
+		0653BB1622BC304900C193BE /* ProfileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1522BC304900C193BE /* ProfileParser.swift */; };
+		0653BB1822BC335E00C193BE /* ProfileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1722BC335E00C193BE /* ProfileLoader.swift */; };
+		0653BB1B22BC33CA00C193BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1A22BC33CA00C193BE /* NetworkManager.swift */; };
+		0653BB1D22BC342D00C193BE /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1C22BC342D00C193BE /* RequestModel.swift */; };
+		0653BB1F22BC345E00C193BE /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1E22BC345E00C193BE /* ApiEndpoints.swift */; };
 		0666477C22BC22A100347153 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666477B22BC22A100347153 /* ViewControllersFactory.swift */; };
 		0666477E22BC250E00347153 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666477D22BC250E00347153 /* Profile.swift */; };
 		0666478122BC265F00347153 /* MainProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666477F22BC265F00347153 /* MainProfileTableViewCell.swift */; };
@@ -34,6 +39,11 @@
 		0653BB0E22BC286200C193BE /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		0653BB1122BC2CD500C193BE /* ProfilesSupplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesSupplier.swift; sourceTree = "<group>"; };
 		0653BB1322BC2D9600C193BE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0653BB1522BC304900C193BE /* ProfileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileParser.swift; sourceTree = "<group>"; };
+		0653BB1722BC335E00C193BE /* ProfileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoader.swift; sourceTree = "<group>"; };
+		0653BB1A22BC33CA00C193BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0653BB1C22BC342D00C193BE /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		0653BB1E22BC345E00C193BE /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
 		0666477B22BC22A100347153 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		0666477D22BC250E00347153 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		0666477F22BC265F00347153 /* MainProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileTableViewCell.swift; sourceTree = "<group>"; };
@@ -71,8 +81,20 @@
 			isa = PBXGroup;
 			children = (
 				0653BB1122BC2CD500C193BE /* ProfilesSupplier.swift */,
+				0653BB1522BC304900C193BE /* ProfileParser.swift */,
+				0653BB1722BC335E00C193BE /* ProfileLoader.swift */,
 			);
 			path = Supplliers;
+			sourceTree = "<group>";
+		};
+		0653BB1922BC33BB00C193BE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0653BB1A22BC33CA00C193BE /* NetworkManager.swift */,
+				0653BB1C22BC342D00C193BE /* RequestModel.swift */,
+				0653BB1E22BC345E00C193BE /* ApiEndpoints.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		0666477A22BC228E00347153 /* Factories */ = {
@@ -88,6 +110,7 @@
 			children = (
 				06B1313922BC1853004B57B4 /* Profiles */,
 				06B1313822BC1853004B57B4 /* Products */,
+				E03D8B62AE735CBC6A0F3824 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,6 +230,7 @@
 		06B1315622BC1B6E004B57B4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0653BB1922BC33BB00C193BE /* Network */,
 				0666477A22BC228E00347153 /* Factories */,
 			);
 			path = Utilities;
@@ -270,6 +294,13 @@
 				0666478022BC265F00347153 /* MainProfileTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		E03D8B62AE735CBC6A0F3824 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,9 +382,14 @@
 				0666477E22BC250E00347153 /* Profile.swift in Sources */,
 				06B1313D22BC1853004B57B4 /* BaseViewController.swift in Sources */,
 				06B1316D22BC1F54004B57B4 /* ProfilesListInteractor.swift in Sources */,
+				0653BB1F22BC345E00C193BE /* ApiEndpoints.swift in Sources */,
+				0653BB1822BC335E00C193BE /* ProfileLoader.swift in Sources */,
 				0666477C22BC22A100347153 /* ViewControllersFactory.swift in Sources */,
+				0653BB1622BC304900C193BE /* ProfileParser.swift in Sources */,
 				06B1316722BC1EF9004B57B4 /* ProfilesListViewController.swift in Sources */,
+				0653BB1D22BC342D00C193BE /* RequestModel.swift in Sources */,
 				0653BB1222BC2CD500C193BE /* ProfilesSupplier.swift in Sources */,
+				0653BB1B22BC33CA00C193BE /* NetworkManager.swift in Sources */,
 				06B1316F22BC1FDB004B57B4 /* ProfilesListDataSource.swift in Sources */,
 				06B1316B22BC1F45004B57B4 /* ProfilesListPresenter.swift in Sources */,
 				0666478122BC265F00347153 /* MainProfileTableViewCell.swift in Sources */,
@@ -507,14 +543,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9VD9T9R724;
+				DEVELOPMENT_TEAM = Z4H43BAFH5;
 				INFOPLIST_FILE = Profiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.profile.Profiles;
+				PRODUCT_BUNDLE_IDENTIFIER = com.profile.Profiles1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -526,14 +562,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9VD9T9R724;
+				DEVELOPMENT_TEAM = Z4H43BAFH5;
 				INFOPLIST_FILE = Profiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.profile.Profiles;
+				PRODUCT_BUNDLE_IDENTIFIER = com.profile.Profiles1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

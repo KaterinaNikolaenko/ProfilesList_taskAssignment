@@ -35,7 +35,7 @@ class ProfilesListViewController: BaseTableViewController {
         
         self.configure()
         
-//        self.interactor.getData()
+        self.interactor.getData()
     }
     
     //MARK: Configuration

@@ -19,10 +19,10 @@ class ProfilesListInteractor {
     
     private let supplier: ProfilesSupplier
     
-//    init(supplier: ProfilesSupplier) {
-//
-//        self.supplier = supplier
-//    }
+    init(supplier: ProfilesSupplier) {
+
+        self.supplier = supplier
+    }
 }
 
 //MARK: - Accessors
@@ -39,17 +39,17 @@ extension ProfilesListInteractor: ProfilesListInteractorProtocol {
     
     func getData() {
         
-//        self.supplier.getProfiles { [weak self] (result) in
-//            guard let strongSelf = self else {
-//                return
-//            }
-//
-//            switch result {
-//            case .success(let trainings):
-//                strongSelf.presenter.present(trainings: trainings)
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-//        }
+        self.supplier.getProfiles { [weak self] (result) in
+            guard let strongSelf = self else {
+                return
+            }
+
+            switch result {
+            case .success(let profiles):
+                strongSelf.presenter.present(profiles: profiles)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

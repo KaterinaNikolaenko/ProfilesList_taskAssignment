@@ -6,23 +6,23 @@
 //  Copyright © 2019 Katerina. All rights reserved.
 //
 
-//import SwiftyJSON
-//import Alamofire
+import SwiftyJSON
+import Alamofire
 
 class ProfilesSupplier {
     
-//    private let parser: Parser
-//
-//    private let loader: Loader
+    private let parser: Parser
+
+    private let loader: Loader
     
     private(set) var profiles: [Profile] = []
     
-//    init(parser: Parser, loader: Loader) {
-//
-//        self.parser = parser
-//
-//        self.loader = loader
-//    }
+    init(parser: Parser, loader: Loader) {
+
+        self.parser = parser
+
+        self.loader = loader
+    }
 }
 
 // MARK: - Fetch profiles
@@ -30,7 +30,7 @@ extension ProfilesSupplier {
     
     typealias ProfilesSupplierCompletion = (Result<[Profile]>) -> Void
     
-    func getTrainings(_ completion: ProfilesSupplierCompletion?) {
+    func getProfiles(_ completion: ProfilesSupplierCompletion?) {
         
         self.loader.getProfiles { [weak self] (result) in
             guard let strongSelf = self else {
@@ -39,8 +39,8 @@ extension ProfilesSupplier {
             
             switch result {
             case .success(let json):
-                let profiles = strongSelf.parseTrainings(json: json)
-                strongSelf.profiles = trainings
+                let profiles = strongSelf.parseProfiles(json: json)
+                strongSelf.profiles = profiles
                 completion?(Result.success(profiles))
             case .failure(let error):
                 completion?(Result.failure(error))
@@ -52,18 +52,19 @@ extension ProfilesSupplier {
 extension ProfilesSupplier {
     
     private enum Keys {
+        static let some = "some"
         static let results = "results"
-        static let trainings = "profiles"
     }
     
     private func parseProfiles(json: JSON) -> [Profile] {
         
-        guard let jsonArray = json.array?.first?[Keys.results].array else {
+        
+        guard let jsonArray = json.array?.first?[Keys.some].array else {
             return []
         }
         
         return jsonArray.compactMap({ (object) -> Profile? in
-            return self.parser.parseTraining(json: object)
+            return self.parser.parseProfile(json: object)
         })
     }
 }
