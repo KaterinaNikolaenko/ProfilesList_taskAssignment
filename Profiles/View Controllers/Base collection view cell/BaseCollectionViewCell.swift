@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseTableViewCell: UITableViewCell, ReuseProtocol {
+class BaseCollectionViewCell: UICollectionViewCell, ReuseProtocol {
 
     override func awakeFromNib() {
         

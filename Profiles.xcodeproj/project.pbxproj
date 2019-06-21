@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0653BB0F22BC286200C193BE /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB0E22BC286200C193BE /* UITableView.swift */; };
 		0653BB1222BC2CD500C193BE /* ProfilesSupplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1122BC2CD500C193BE /* ProfilesSupplier.swift */; };
 		0653BB1422BC2D9600C193BE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1322BC2D9600C193BE /* Result.swift */; };
 		0653BB1622BC304900C193BE /* ProfileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB1522BC304900C193BE /* ProfileParser.swift */; };
@@ -21,6 +20,12 @@
 		0653BB2A22BC4E0A00C193BE /* MainProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB2822BC4E0A00C193BE /* MainProfileCollectionViewCell.swift */; };
 		0653BB2B22BC4E0A00C193BE /* MainProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0653BB2922BC4E0A00C193BE /* MainProfileCollectionViewCell.xib */; };
 		0653BB2E22BC5A6C00C193BE /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB2D22BC5A6C00C193BE /* ProfileNavigationController.swift */; };
+		0653BB3322BC648000C193BE /* ProfileDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB3222BC648000C193BE /* ProfileDetailsInteractor.swift */; };
+		0653BB3522BC648E00C193BE /* ProfileDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB3422BC648E00C193BE /* ProfileDetailsPresenter.swift */; };
+		0653BB3822BC64A600C193BE /* ProfileDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB3622BC64A600C193BE /* ProfileDetailsViewController.swift */; };
+		0653BB3922BC64A600C193BE /* ProfileDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0653BB3722BC64A600C193BE /* ProfileDetailsViewController.xib */; };
+		0653BB3C22BC733600C193BE /* GeneralAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB3B22BC733600C193BE /* GeneralAlert.swift */; };
+		0653BB3E22BCA5EC00C193BE /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653BB3D22BCA5EC00C193BE /* UICollectionView.swift */; };
 		0666477C22BC22A100347153 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666477B22BC22A100347153 /* ViewControllersFactory.swift */; };
 		0666477E22BC250E00347153 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666477D22BC250E00347153 /* Profile.swift */; };
 		06B1313B22BC1853004B57B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1313A22BC1853004B57B4 /* AppDelegate.swift */; };
@@ -28,11 +33,9 @@
 		06B1314022BC1853004B57B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B1313E22BC1853004B57B4 /* Main.storyboard */; };
 		06B1314222BC1855004B57B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B1314122BC1855004B57B4 /* Assets.xcassets */; };
 		06B1314522BC1855004B57B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B1314322BC1855004B57B4 /* LaunchScreen.storyboard */; };
-		06B1315822BC1C48004B57B4 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1315722BC1C48004B57B4 /* BaseTableViewController.swift */; };
 		06B1315B22BC1CBD004B57B4 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1315A22BC1CBD004B57B4 /* UIView.swift */; };
-		06B1315D22BC1D9C004B57B4 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1315C22BC1D9C004B57B4 /* BaseTableViewCell.swift */; };
+		06B1315D22BC1D9C004B57B4 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1315C22BC1D9C004B57B4 /* BaseCollectionViewCell.swift */; };
 		06B1316022BC1DE1004B57B4 /* ReuseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1315F22BC1DE1004B57B4 /* ReuseProtocol.swift */; };
-		06B1316222BC1E37004B57B4 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1316122BC1E37004B57B4 /* TableViewDataSource.swift */; };
 		06B1316722BC1EF9004B57B4 /* ProfilesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1316622BC1EF9004B57B4 /* ProfilesListViewController.swift */; };
 		06B1316B22BC1F45004B57B4 /* ProfilesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1316A22BC1F45004B57B4 /* ProfilesListPresenter.swift */; };
 		06B1316D22BC1F54004B57B4 /* ProfilesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B1316C22BC1F54004B57B4 /* ProfilesListInteractor.swift */; };
@@ -40,7 +43,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0653BB0E22BC286200C193BE /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		0653BB1122BC2CD500C193BE /* ProfilesSupplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesSupplier.swift; sourceTree = "<group>"; };
 		0653BB1322BC2D9600C193BE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		0653BB1522BC304900C193BE /* ProfileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileParser.swift; sourceTree = "<group>"; };
@@ -54,6 +56,12 @@
 		0653BB2822BC4E0A00C193BE /* MainProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		0653BB2922BC4E0A00C193BE /* MainProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		0653BB2D22BC5A6C00C193BE /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
+		0653BB3222BC648000C193BE /* ProfileDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsInteractor.swift; sourceTree = "<group>"; };
+		0653BB3422BC648E00C193BE /* ProfileDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsPresenter.swift; sourceTree = "<group>"; };
+		0653BB3622BC64A600C193BE /* ProfileDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsViewController.swift; sourceTree = "<group>"; };
+		0653BB3722BC64A600C193BE /* ProfileDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileDetailsViewController.xib; sourceTree = "<group>"; };
+		0653BB3B22BC733600C193BE /* GeneralAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAlert.swift; sourceTree = "<group>"; };
+		0653BB3D22BCA5EC00C193BE /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		0666477B22BC22A100347153 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		0666477D22BC250E00347153 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		06B1313722BC1853004B57B4 /* Profiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Profiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,11 +71,9 @@
 		06B1314122BC1855004B57B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06B1314422BC1855004B57B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06B1314622BC1855004B57B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		06B1315722BC1C48004B57B4 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		06B1315A22BC1CBD004B57B4 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		06B1315C22BC1D9C004B57B4 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		06B1315C22BC1D9C004B57B4 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		06B1315F22BC1DE1004B57B4 /* ReuseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseProtocol.swift; sourceTree = "<group>"; };
-		06B1316122BC1E37004B57B4 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		06B1316622BC1EF9004B57B4 /* ProfilesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesListViewController.swift; sourceTree = "<group>"; };
 		06B1316A22BC1F45004B57B4 /* ProfilesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesListPresenter.swift; sourceTree = "<group>"; };
 		06B1316C22BC1F54004B57B4 /* ProfilesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesListInteractor.swift; sourceTree = "<group>"; };
@@ -128,6 +134,39 @@
 				0653BB2D22BC5A6C00C193BE /* ProfileNavigationController.swift */,
 			);
 			path = "Navigation Controller";
+			sourceTree = "<group>";
+		};
+		0653BB2F22BC645A00C193BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0653BB3622BC64A600C193BE /* ProfileDetailsViewController.swift */,
+				0653BB3722BC64A600C193BE /* ProfileDetailsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0653BB3022BC646100C193BE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0653BB3422BC648E00C193BE /* ProfileDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0653BB3122BC646900C193BE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0653BB3222BC648000C193BE /* ProfileDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0653BB3A22BC731F00C193BE /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				0653BB3B22BC733600C193BE /* GeneralAlert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		0666477A22BC228E00347153 /* Factories */ = {
@@ -198,9 +237,7 @@
 				0653BB2C22BC5A4C00C193BE /* Navigation Controller */,
 				0653BB2022BC497900C193BE /* Collection View */,
 				06B1315322BC1B13004B57B4 /* Base */,
-				06B1315222BC1AFC004B57B4 /* Base Table View */,
-				06B1315122BC1AE9004B57B4 /* Data Source */,
-				06B1315022BC1ADE004B57B4 /* Base Table View Cell */,
+				06B1315022BC1ADE004B57B4 /* Base collection view cell */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -208,33 +245,17 @@
 		06B1314F22BC1AC4004B57B4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				06B1315E22BC1DCA004B57B4 /* TableView */,
+				06B1315E22BC1DCA004B57B4 /* CollectionView */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		06B1315022BC1ADE004B57B4 /* Base Table View Cell */ = {
+		06B1315022BC1ADE004B57B4 /* Base collection view cell */ = {
 			isa = PBXGroup;
 			children = (
-				06B1315C22BC1D9C004B57B4 /* BaseTableViewCell.swift */,
+				06B1315C22BC1D9C004B57B4 /* BaseCollectionViewCell.swift */,
 			);
-			path = "Base Table View Cell";
-			sourceTree = "<group>";
-		};
-		06B1315122BC1AE9004B57B4 /* Data Source */ = {
-			isa = PBXGroup;
-			children = (
-				06B1316122BC1E37004B57B4 /* TableViewDataSource.swift */,
-			);
-			path = "Data Source";
-			sourceTree = "<group>";
-		};
-		06B1315222BC1AFC004B57B4 /* Base Table View */ = {
-			isa = PBXGroup;
-			children = (
-				06B1315722BC1C48004B57B4 /* BaseTableViewController.swift */,
-			);
-			path = "Base Table View";
+			path = "Base collection view cell";
 			sourceTree = "<group>";
 		};
 		06B1315322BC1B13004B57B4 /* Base */ = {
@@ -258,6 +279,9 @@
 		06B1315522BC1B49004B57B4 /* ProfileDetails */ = {
 			isa = PBXGroup;
 			children = (
+				0653BB3122BC646900C193BE /* Interactor */,
+				0653BB3022BC646100C193BE /* Presenter */,
+				0653BB2F22BC645A00C193BE /* View */,
 			);
 			path = ProfileDetails;
 			sourceTree = "<group>";
@@ -265,6 +289,7 @@
 		06B1315622BC1B6E004B57B4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0653BB3A22BC731F00C193BE /* Alert */,
 				0653BB1922BC33BB00C193BE /* Network */,
 				0666477A22BC228E00347153 /* Factories */,
 			);
@@ -275,18 +300,18 @@
 			isa = PBXGroup;
 			children = (
 				06B1315A22BC1CBD004B57B4 /* UIView.swift */,
-				0653BB0E22BC286200C193BE /* UITableView.swift */,
 				0653BB2322BC4A2700C193BE /* UIViewController.swift */,
+				0653BB3D22BCA5EC00C193BE /* UICollectionView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		06B1315E22BC1DCA004B57B4 /* TableView */ = {
+		06B1315E22BC1DCA004B57B4 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				06B1315F22BC1DE1004B57B4 /* ReuseProtocol.swift */,
 			);
-			path = TableView;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		06B1316322BC1E9B004B57B4 /* View */ = {
@@ -401,6 +426,7 @@
 				06B1314222BC1855004B57B4 /* Assets.xcassets in Resources */,
 				06B1314022BC1853004B57B4 /* Main.storyboard in Resources */,
 				0653BB2B22BC4E0A00C193BE /* MainProfileCollectionViewCell.xib in Resources */,
+				0653BB3922BC64A600C193BE /* ProfileDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,11 +439,12 @@
 			files = (
 				0653BB2222BC49A800C193BE /* BaseCollectionViewController.swift in Sources */,
 				06B1316022BC1DE1004B57B4 /* ReuseProtocol.swift in Sources */,
+				0653BB3E22BCA5EC00C193BE /* UICollectionView.swift in Sources */,
 				06B1315B22BC1CBD004B57B4 /* UIView.swift in Sources */,
-				0653BB0F22BC286200C193BE /* UITableView.swift in Sources */,
-				06B1315822BC1C48004B57B4 /* BaseTableViewController.swift in Sources */,
 				0666477E22BC250E00347153 /* Profile.swift in Sources */,
+				0653BB3322BC648000C193BE /* ProfileDetailsInteractor.swift in Sources */,
 				06B1313D22BC1853004B57B4 /* BaseViewController.swift in Sources */,
+				0653BB3C22BC733600C193BE /* GeneralAlert.swift in Sources */,
 				06B1316D22BC1F54004B57B4 /* ProfilesListInteractor.swift in Sources */,
 				0653BB1F22BC345E00C193BE /* ApiEndpoints.swift in Sources */,
 				0653BB1822BC335E00C193BE /* ProfileLoader.swift in Sources */,
@@ -428,15 +455,16 @@
 				0653BB2422BC4A2700C193BE /* UIViewController.swift in Sources */,
 				0653BB1222BC2CD500C193BE /* ProfilesSupplier.swift in Sources */,
 				0653BB1B22BC33CA00C193BE /* NetworkManager.swift in Sources */,
+				0653BB3522BC648E00C193BE /* ProfileDetailsPresenter.swift in Sources */,
 				06B1316F22BC1FDB004B57B4 /* ProfilesListDataSource.swift in Sources */,
 				06B1316B22BC1F45004B57B4 /* ProfilesListPresenter.swift in Sources */,
-				06B1315D22BC1D9C004B57B4 /* BaseTableViewCell.swift in Sources */,
+				06B1315D22BC1D9C004B57B4 /* BaseCollectionViewCell.swift in Sources */,
 				0653BB2722BC4AF800C193BE /* BaseCollectionViewDataSource.swift in Sources */,
 				0653BB2E22BC5A6C00C193BE /* ProfileNavigationController.swift in Sources */,
 				0653BB1422BC2D9600C193BE /* Result.swift in Sources */,
 				0653BB2A22BC4E0A00C193BE /* MainProfileCollectionViewCell.swift in Sources */,
-				06B1316222BC1E37004B57B4 /* TableViewDataSource.swift in Sources */,
 				06B1313B22BC1853004B57B4 /* AppDelegate.swift in Sources */,
+				0653BB3822BC64A600C193BE /* ProfileDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

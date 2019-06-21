@@ -39,6 +39,20 @@ extension ProfilesSupplier.Loader {
             }
         }
     }
+    
+    func getProfile(id: Int, _ completion: ProfilesLoaderCompletion?) {
+        
+        let model = RequestModel(endpoint: ApiEndpoints.baseURL + "/" + String(id), methodType: .get, parameters: nil, encoding: URLEncoding.default)
+        
+        self.networkManager.request(model: model) { (result) in
+            switch result {
+            case .success(let json):
+                completion?(Result.success(json))
+            case .failure(let error):
+                completion?(Result.failure(error))
+            }
+        }
+    }
 }
 
 

@@ -48,7 +48,7 @@ extension ProfilesListInteractor: ProfilesListInteractorProtocol {
             case .success(let profiles):
                 strongSelf.presenter.present(profiles: profiles)
             case .failure(let error):
-                print(error.localizedDescription)
+                strongSelf.presenter.presentError()
             }
         }
     }

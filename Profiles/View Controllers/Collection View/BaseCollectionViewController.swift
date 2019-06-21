@@ -16,10 +16,6 @@ class BaseCollectionViewController: BaseViewController {
         return UICollectionViewFlowLayout()
     }
     
-    class var pinCollectionViewToLayoutGuides: Bool {
-        return false
-    }
-    
     //MARK: - Life Cycle
     override func loadView() {
         
@@ -31,19 +27,6 @@ class BaseCollectionViewController: BaseViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        self.configure()
-    }
-    
-    //MARK: - Private
-    private func configure() {
-        
-        self.configureCollectionView()
-    }
-    
-    private func configureCollectionView() {
-        
-        
     }
 }
 

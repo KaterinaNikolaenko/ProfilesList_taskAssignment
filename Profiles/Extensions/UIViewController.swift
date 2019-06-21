@@ -17,10 +17,15 @@ extension UIViewController {
     }
 }
 
-public extension UICollectionView {
+extension UIViewController {
     
-    func dequeueCell<T: UICollectionViewCell & ReuseProtocol>(_ cellClass: T.Type, for indexPath: IndexPath) -> T {
+    func open(viewController: UIViewController, animated: Bool) {
         
-        return self.dequeueReusableCell(withReuseIdentifier: cellClass.reuseIdentifier, for: indexPath) as! T
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(viewController, animated: animated)
+        }
+        else {
+            self.present(viewController, animated: animated)
+        }
     }
 }

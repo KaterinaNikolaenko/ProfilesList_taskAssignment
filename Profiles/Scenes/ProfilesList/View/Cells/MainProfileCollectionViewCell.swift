@@ -9,13 +9,21 @@
 import UIKit
 import Kingfisher
 
-class MainProfileCollectionViewCell: UICollectionViewCell, ReuseProtocol {
+class MainProfileCollectionViewCell: BaseCollectionViewCell {
 
     @IBOutlet private weak var profilePictureImageView: UIImageView!
+    @IBOutlet private weak var isFavoriteImageView: UIImageView!
     
     override func awakeFromNib() {
         
         super.awakeFromNib()
+        
+        self.config()
+    }
+    
+    private func config() {
+        
+        self.isFavoriteImageView.isHidden = true
     }
 }
 
@@ -27,5 +35,10 @@ extension MainProfileCollectionViewCell {
         if let url = URL(string: urlStr) {
             self.profilePictureImageView.kf.setImage(with: ImageResource(downloadURL: url))
         }
+    }
+    
+    func set(isFavorite: Bool) {
+        
+        self.isFavoriteImageView.isHidden = !isFavorite
     }
 }

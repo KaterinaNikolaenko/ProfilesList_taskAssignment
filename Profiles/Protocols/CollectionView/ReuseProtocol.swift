@@ -33,28 +33,10 @@ public extension ReuseProtocol {
     }
 }
 
-public extension UITableView {
-    
-    func registerCell(_ cell: ReuseProtocol.Type) {
-        
-        self.register(cell.nib(), forCellReuseIdentifier: cell.reuseIdentifier)
-    }
-    
-    func registerSupplimentaryView(_ cell: ReuseProtocol.Type) {
-        
-        self.register(cell.nib(), forHeaderFooterViewReuseIdentifier: cell.reuseIdentifier)
-    }
-}
-
 public extension UICollectionView {
     
     func registerCell(_ cell: ReuseProtocol.Type) {
         
         self.register(cell.nib(), forCellWithReuseIdentifier: cell.reuseIdentifier)
-    }
-    
-    func registerSupplimentaryView(_ cell: ReuseProtocol.Type, kind: String) {
-        
-        self.register(cell.nib(), forSupplementaryViewOfKind: kind, withReuseIdentifier: cell.reuseIdentifier)
     }
 }

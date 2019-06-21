@@ -8,17 +8,17 @@
 
 import Foundation
 
-struct Profile: Codable {
+class Profile: Codable {
     
     let id: Int
     
-    let first_name: String?
+    var first_name: String?
     
-    let last_name: String?
+    var last_name: String?
     
-    let profile_picture: String
+    var profile_picture: String
     
-    let isFavorite: Bool
+    var isFavorite: Bool
     
     init(id: Int, first_name: String?, last_name: String?, profile_picture: String, isFavorite: Bool) {
         

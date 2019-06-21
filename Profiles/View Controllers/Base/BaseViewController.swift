@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
 
     var defaultBackground: UIColor? {
-        return UIColor.red
+        return UIColor.white
     }
     
     class var nibFile: String? {

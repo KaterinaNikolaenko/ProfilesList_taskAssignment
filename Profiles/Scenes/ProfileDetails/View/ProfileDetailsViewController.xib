@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileDetailsViewController" customModule="Profiles" customModuleProvider="target">
+            <connections>
+                <outlet property="isFavoriteImageView" destination="Bqo-AH-gP6" id="jiE-GN-nuM"/>
+                <outlet property="mainImageView" destination="xgZ-6F-ojc" id="Tq6-V0-daO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xgZ-6F-ojc">
+                    <rect key="frame" x="5" y="208.5" width="365" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="OyH-EG-ap8"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAx-Ra-6Vd">
+                    <rect key="frame" x="30" y="508.5" width="315" height="60"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="RiI-wj-x6i"/>
+                    </constraints>
+                    <state key="normal" title="Make it Favorite">
+                        <color key="titleColor" red="1" green="0.13038139583505459" blue="0.26103773525402718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="makeFavorite:" destination="-1" eventType="touchUpInside" id="xQ2-Iw-L1F"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_favorite" translatesAutoresizingMaskIntoConstraints="NO" id="Bqo-AH-gP6">
+                    <rect key="frame" x="163.5" y="309.5" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="OLj-NN-y9O"/>
+                        <constraint firstAttribute="width" constant="48" id="ikH-Ij-9b0"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xgZ-6F-ojc" secondAttribute="trailing" constant="5" id="3T1-3V-2ro"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oAx-Ra-6Vd" secondAttribute="trailing" constant="30" id="NUP-2a-NO7"/>
+                <constraint firstItem="Bqo-AH-gP6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ved-oa-33E"/>
+                <constraint firstItem="oAx-Ra-6Vd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XqY-zk-Npj"/>
+                <constraint firstItem="Bqo-AH-gP6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XwN-P2-j2Z"/>
+                <constraint firstItem="xgZ-6F-ojc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bHM-8w-zfA"/>
+                <constraint firstItem="xgZ-6F-ojc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="e0S-BO-rhv"/>
+                <constraint firstItem="oAx-Ra-6Vd" firstAttribute="top" secondItem="xgZ-6F-ojc" secondAttribute="bottom" constant="50" id="iQ2-gl-gNP"/>
+                <constraint firstItem="oAx-Ra-6Vd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="u06-UB-EGt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_favorite" width="24" height="24"/>
+    </resources>
+</document>

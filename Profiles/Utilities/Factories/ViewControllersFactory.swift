@@ -35,5 +35,22 @@ extension ViewControllersFactory {
         
         return navig
     }
+    
+    static func getProfileDetailsController(profile: Profile) -> ProfileDetailsViewController {
+        
+        let parser = ProfilesSupplier.Parser()
+        let loader = ProfilesSupplier.Loader()
+        let supplier = ProfilesSupplier(parser: parser, loader: loader)
+        
+        let viewController = ProfileDetailsViewController()
+        let presenter = ProfileDetailsPresenter()
+        let interactor = ProfileDetailsInteractor(supplier: supplier, profile: profile)
+        
+        viewController.set(interactor: interactor)
+        interactor.set(presenter: presenter)
+        presenter.set(view: viewController)
+                
+        return viewController
+    }
 }
 

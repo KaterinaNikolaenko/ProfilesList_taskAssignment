@@ -11,6 +11,7 @@ import UIKit
 protocol ProfilesListViewProtocol: class {
     
     func show(profiles: [Profile])
+    func showErrorMessage()
 }
 
 class ProfilesListViewController: BaseCollectionViewController {
@@ -35,6 +36,10 @@ class ProfilesListViewController: BaseCollectionViewController {
         self.configure()
         
         self.interactor.getData()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.collectionView.reloadData()
     }
     
     //MARK: Configuration
@@ -72,8 +77,14 @@ extension ProfilesListViewController {
 
 extension ProfilesListViewController: UICollectionViewDelegate {
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        guard let selectedItem = self.dataSource.item(at: indexPath.row) else {
+            return
+        }
+        var viewController: UIViewController?
+        viewController = ViewControllersFactory.getProfileDetailsController(profile: selectedItem)
+        self.open(viewController: viewController!, animated: true)
     }
 }
 
@@ -92,7 +103,7 @@ extension ProfilesListViewController: UICollectionViewDelegateFlowLayout {
 }
 
 //MARK: - View Protocol
-extension ProfilesListViewController: ProfilesListViewProtocol {
+extension ProfilesListViewController: ProfilesListViewProtocol, SimpleAlertProtocol {
 
     func show(profiles: [Profile]) {
 
@@ -100,5 +111,10 @@ extension ProfilesListViewController: ProfilesListViewProtocol {
         self.dataSource.set(items: profiles)
 
         self.collectionView.reloadData()
+    }
+    
+    func showErrorMessage() {
+        
+        self.showGeneralPopUp("Error!", message: "500 Internal Server Error")
     }
 }

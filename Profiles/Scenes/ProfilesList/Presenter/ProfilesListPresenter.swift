@@ -11,6 +11,7 @@ import Foundation
 protocol ProfilesListPresenterProtocol: class {
     
     func present(profiles: [Profile])
+    func presentError()
 }
 
 class ProfilesListPresenter {
@@ -34,6 +35,13 @@ extension ProfilesListPresenter: ProfilesListPresenterProtocol {
         
         DispatchQueue.main.async {
             self.view?.show(profiles: profiles)
+        }
+    }
+    
+    func presentError() {
+        
+        DispatchQueue.main.async {
+            self.view?.showErrorMessage()
         }
     }
 }

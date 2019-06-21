@@ -21,6 +21,7 @@ class ProfilesListDataSource: BaseCollectionViewDataSource<Profile> {
         let cell = collectionView.dequeueCell(MainProfileCollectionViewCell.self, for: indexPath)
         
         cell.set(urlStr: item.profile_picture)
+        cell.set(isFavorite: item.isFavorite)
         
         return cell
     }

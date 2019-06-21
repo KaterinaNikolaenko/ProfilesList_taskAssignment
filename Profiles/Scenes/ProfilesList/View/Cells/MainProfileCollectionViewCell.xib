@@ -19,24 +19,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bC4-ct-8an">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bC4-ct-8an">
                         <rect key="frame" x="15" y="15" width="120" height="120"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="8Hj-zi-lhZ"/>
                             <constraint firstAttribute="height" constant="120" id="E3R-jE-9BO"/>
                         </constraints>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_favorite" translatesAutoresizingMaskIntoConstraints="NO" id="Tk8-dH-lYP">
+                        <rect key="frame" x="51" y="51" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="Rs2-Hb-wqT"/>
+                            <constraint firstAttribute="width" constant="48" id="s8v-uL-PqF"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="bC4-ct-8an" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="J19-VV-1KD"/>
+                <constraint firstItem="bC4-ct-8an" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="7ZQ-AE-w8q"/>
+                <constraint firstItem="Tk8-dH-lYP" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Chi-8f-r0b"/>
                 <constraint firstItem="bC4-ct-8an" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="WCm-e9-EaG"/>
+                <constraint firstItem="Tk8-dH-lYP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="veO-IJ-HGQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="isFavoriteImageView" destination="Tk8-dH-lYP" id="dj0-1D-rMx"/>
                 <outlet property="profilePictureImageView" destination="bC4-ct-8an" id="9f8-dG-GJJ"/>
             </connections>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="ic_favorite" width="24" height="24"/>
+    </resources>
 </document>
