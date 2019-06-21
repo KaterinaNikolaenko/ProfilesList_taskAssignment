@@ -9,28 +9,26 @@
 import Foundation
 import  UIKit
 
-class ProfilesListDataSource: TableViewDataSource<Profile> {
+class ProfilesListDataSource: BaseCollectionViewDataSource<Profile> {
     
-    override func cellForItem(_ item: Profile, at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
+    override func cellForItem(_ item: Profile, at indexPath: IndexPath, in collectionView: UICollectionView) -> UICollectionViewCell {
         
-        return self.mainProfileCell(item, tableView: tableView, at: indexPath)
+        return self.mainProfileCell(item, collectionView: collectionView, at: indexPath)
     }
     
-    private func mainProfileCell(_ item: Profile, tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
+    private func mainProfileCell(_ item: Profile, collectionView: UICollectionView, at indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = tableView.dequeueCell(MainProfileTableViewCell.self, selectionStyle: .none)
+        let cell = collectionView.dequeueCell(MainProfileCollectionViewCell.self, for: indexPath)
         
-//        cell.set(image: item.image)
+        cell.set(urlStr: item.profile_picture)
         
         return cell
     }
     
-    override func registerRequiredCells(for tableView: UITableView) {
+    override func registerRequiredCells(for collectionView: UICollectionView) {
         
-        tableView.registerCell(MainProfileTableViewCell.self)
+        collectionView.registerCell(MainProfileCollectionViewCell.self)
     }
 }
-
-
 
 

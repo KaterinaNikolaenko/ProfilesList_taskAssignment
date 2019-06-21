@@ -17,7 +17,7 @@ final class ViewControllersFactory {
 
 extension ViewControllersFactory {
     
-    static func getMainController() -> ProfilesListViewController {
+    static func getMainController() -> ProfileNavigationController {
         
         let parser = ProfilesSupplier.Parser()
         let loader = ProfilesSupplier.Loader()
@@ -31,7 +31,9 @@ extension ViewControllersFactory {
         interactor.set(presenter: presenter)
         presenter.set(view: viewController)
         
-        return viewController
+        let navig = ProfileNavigationController(rootViewController: viewController)
+        
+        return navig
     }
 }
 

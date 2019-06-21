@@ -13,8 +13,8 @@ protocol ProfilesListViewProtocol: class {
     func show(profiles: [Profile])
 }
 
-class ProfilesListViewController: BaseTableViewController {
-
+class ProfilesListViewController: BaseCollectionViewController {
+    
     private var interactor: ProfilesListInteractorProtocol!
     
     private lazy var dataSource: ProfilesListDataSource = {
@@ -24,9 +24,8 @@ class ProfilesListViewController: BaseTableViewController {
     
     private var profiles: [Profile] = []
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    private let sectionInset: CGFloat = 10
+    private let cellMarginHeight: CGFloat = 150
     
     //MARK: Life Cycle
     override func viewDidLoad() {
@@ -41,54 +40,65 @@ class ProfilesListViewController: BaseTableViewController {
     //MARK: Configuration
     private func configure() {
         
-        self.configureTableView()
-        
-        self.configureNavigationBar()
+        self.configureCollectionView()
+        self.title = "Profiles"
     }
     
-    private func configureTableView() {
+    private func configureCollectionView() {
         
-        self.tableView.backgroundColor = UIColor.clear
-        self.tableView.dataSource = self.dataSource
-        self.tableView.delegate = self
-        self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.estimatedRowHeight = 110
+        self.collectionView.backgroundColor = .white
+        self.collectionView.dataSource = dataSource
+        self.collectionView.delegate = self
         
-        self.dataSource.registerRequiredCells(for: self.tableView)
+        let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        flow.minimumInteritemSpacing = self.sectionInset
+        flow.minimumLineSpacing = self.sectionInset
+        flow.sectionInset = UIEdgeInsets(top: self.sectionInset, left: self.sectionInset, bottom: 0, right: self.sectionInset)
+        
+        self.collectionView.registerCell(MainProfileCollectionViewCell.self)
+        
         self.dataSource.set(items: profiles)
-    }
-    
-    private func configureNavigationBar() {
-        
     }
 }
 
 //MARK: - Public
 extension ProfilesListViewController {
-    
+
     func set(interactor: ProfilesListInteractorProtocol) {
-        
+
         self.interactor = interactor
     }
 }
 
-//MARK: - Table View Delegate
-extension ProfilesListViewController: UITableViewDelegate {
+extension ProfilesListViewController: UICollectionViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension ProfilesListViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let sideSize = collectionView.frame
+        
+        let size = CGSize(width: (sideSize.width / 2) - (self.sectionInset * 2), height: self.cellMarginHeight)
+        
+        return size
     }
 }
 
 //MARK: - View Protocol
 extension ProfilesListViewController: ProfilesListViewProtocol {
-    
+
     func show(profiles: [Profile]) {
-        
+
         self.profiles = profiles
         self.dataSource.set(items: profiles)
-        
-        self.tableView.reloadData()
+
+        self.collectionView.reloadData()
     }
 }
